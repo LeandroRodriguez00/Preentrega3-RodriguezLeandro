@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", function () {
       formulario.reset();
       resultadoDiv.textContent = "Reserva guardada con éxito.";
     } else {
-      resultadoDiv.textContent = "El restaurante ha alcanzado su capacidad máxima, sin embargo puede venir y anotarse en lista de espera";
+      resultadoDiv.textContent = "Lo siento, el restaurante ha alcanzado su capacidad máxima.";
     }
   }
 
   function buscarPorNombre() {
-    const nombreBuscar = document.getElementById("nombreBuscar").value.toLowerCase ();
-    const reservasEncontradas = reservas.filter((reserva) => reserva.nombre.toLowerCase () === nombreBuscar);
+    const nombreBuscar = document.getElementById("nombreBuscar").value;
+    const reservasEncontradas = reservas.filter((reserva) => reserva.nombre === nombreBuscar);
 
     resultadoDiv.innerHTML = '';
 
@@ -109,8 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function borrarReserva() {
-    const nombreBorrar = document.getElementById("nombreBorrar").value.toLowerCase ();
-    const reservaIndex = reservas.findIndex((reserva) => reserva.nombre.toLowerCase () === nombreBorrar);
+    const nombreBorrar = document.getElementById("nombreBorrar").value;
+    const reservaIndex = reservas.findIndex((reserva) => reserva.nombre === nombreBorrar);
 
     if (reservaIndex !== -1) {
       const reservaBorrada = reservas.splice(reservaIndex, 1)[0];

@@ -6,16 +6,26 @@
 <link rel="icon" type="image/png" href="./imagenes/logo.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 <link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
 <title>Reservar en Lado V</title>
-<script src="./app.js/script.js"></script>
+<script src=".//app.js/script.js"></script>
 </head>
 <body>
 <header>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"id="openLoginModal">Panel Administrador</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        </div>
+    
+</nav>
     <nav class="navbar navbar-expand-md navbar-dark bg-pink">
-        <div class="container d-flex justify-content-center">
-        <a class="navbar-brand" href="./index.html">
-        <img src="./imagenes/logo.png" alt="Logo">
-        </a>
+        <div class=" logo container d-flex justify-content-center">
+        <a class="navbar-brand" href="./index.html"> </a>
+        <img src="./imagenes/logo.png" alt="Logo" class="logo">
         </div>
     </nav>
   </header>
@@ -26,6 +36,13 @@
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre:</label>
         <input type="text" class="form-control" id="nombre" name="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="hora">Hora de la reserva:</label>
+        <select id="hora" name="hora">
+        <option value="21:00">21:00</option>
+        <option value="21:30">21:30</option>
+        </select>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Correo electrónico:</label>
@@ -39,10 +56,7 @@
         <label for="fecha" class="form-label">Fecha:</label>
         <input type="date" class="form-control" id="fecha" name="fecha" required>
       </div>
-      <div class="mb-3">
-        <label for="hora" class="form-label">Hora:</label>
-        <input type="time" class="form-control" id="hora" name="hora" required>
-      </div>
+      
       <div class="mb-3">
         <label for="personas" class="form-label">Número de personas:</label>
         <input type="number" class="form-control" id="personas" name="personas" min="1" required>
@@ -54,24 +68,9 @@
       <button type="submit" class="btn btn-primary">Enviar Reserva</button>
     
     </form>
-    
-    <div id="resultado"></div>
-    </div>
-    <div class=" busqueda text-center">
-    <label for="nombreBuscar">Busqueda de reservas:</label>
-<input type="text" id="nombreBuscar" placeholder="Nombre">
-<button id="buscarNombreBtn" class="btn btn-info">Busqueda</button>
-</div>
-<div class="borrar text-center">
-<label for="nombreBorrar">Borrar reserva:</label>
-<input type="text" id="nombreBorrar" placeholder="Nombre">
-<button id="borrarBtn" class="btn btn-danger">Borrar</button>
-</div>
-<div class="botoneras text-center mb-3">
-  
-<button id="mostrarBtn" class="btn btn-primary">Mostrar Reservas</button>
 
 </div>
+
   </main>
   <footer class="text-center">
     <div class="container">
@@ -85,5 +84,14 @@
       </div>
     </div>
   </footer>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
+
+
+
+

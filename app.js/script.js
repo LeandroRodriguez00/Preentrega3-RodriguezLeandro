@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (username === "ladov" && password === "1234") {
             isValid = true;
           } else {
-            Swal.showValidationMessage('Contraseña incorrecta');
+            Swal.showValidationMessage('Contraseña incorrecta, vuelva a ingresar los datos');
             document.getElementById("username").value = "";
             document.getElementById("password").value = "";
           }
@@ -67,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#openLoginModal").click(() => {
       verifyPassword()
         .then(() => {
-         
         })
         .catch((error) => {
           
@@ -157,7 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
       formulario.reset();
       resultadoDiv.textContent = "Reserva guardada con éxito.";
     } else {
-      resultadoDiv.textContent = "Lo siento, el restaurante ha alcanzado su capacidad máxima.";
+      resultadoDiv.textContent = "El restaurante ya no tiene capacidad para realizar reservas";
     }
   }
 
@@ -203,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       resultadoDiv.scrollIntoView({ behavior: "smooth" });
     } else {
-      resultadoDiv.textContent = "No hay reservas almacenadas.";
+      resultadoDiv.textContent = "No hay reservas guardadas.";
     }
   }
 
